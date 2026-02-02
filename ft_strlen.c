@@ -6,11 +6,13 @@
 /*   By: gogalsty <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 17:06:54 by gogalsty          #+#    #+#             */
-/*   Updated: 2026/01/28 17:07:59 by gogalsty         ###   ########.fr       */
+/*   Updated: 2026/02/02 18:05:05 by gogalsty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

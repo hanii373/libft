@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gogalsty <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/31 18:31:11 by gogalsty          #+#    #+#             */
-/*   Updated: 2026/01/31 18:44:10 by gogalsty         ###   ########.fr       */
+/*   Created: 2026/02/02 18:33:17 by gogalsty          #+#    #+#             */
+/*   Updated: 2026/02/02 18:33:20 by gogalsty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_tolower(char *str)
 {
-	int	sum;
 	int	i;
-	int	sign;
 
 	i = 0;
-	sum = 0;
-	sign = 1;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		++i;
-	if (str[i] == '-' || str[i] == '+')
+	while (str[i] != '\0')
 	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
+		if (str[i] >= 97 && str[i] <= 122)
+			i++;
+		else
+			return (0);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		sum = (sum * 10) + (str[i] - '0');
-		i++;
-	}
-	return (sign * sum);
+	return (1);
 }
