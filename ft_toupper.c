@@ -6,23 +6,19 @@
 /*   By: gogalsty <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:36:23 by gogalsty          #+#    #+#             */
-/*   Updated: 2026/02/04 17:57:47 by gogalsty         ###   ########.fr       */
+/*   Updated: 2026/02/04 18:08:23 by gogalsty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(char *str)
+int	ft_toupper(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	if (c >= 'a' && c <= 'z')
 	{
-		if (str[i] >= 65 && str[i] <= 90)
-			i++;
-		else
-			return (0);
+		c -= 32;
+		return (c);
 	}
-	return (1);
+	else
+		return (c);
 }

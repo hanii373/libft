@@ -6,23 +6,19 @@
 /*   By: gogalsty <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 18:33:17 by gogalsty          #+#    #+#             */
-/*   Updated: 2026/02/02 18:33:20 by gogalsty         ###   ########.fr       */
+/*   Updated: 2026/02/04 18:12:01 by gogalsty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(char *str)
+int	ft_tolower(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	if (c >= 'A' && c <= 'Z')
 	{
-		if (str[i] >= 97 && str[i] <= 122)
-			i++;
-		else
-			return (0);
+		c += 32;
+		return (c);
 	}
-	return (1);
+	else
+		return (c);
 }
