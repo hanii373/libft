@@ -6,13 +6,13 @@
 /*   By: gogalsty <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:36:23 by gogalsty          #+#    #+#             */
-/*   Updated: 2026/01/31 15:37:15 by gogalsty         ###   ########.fr       */
+/*   Updated: 2026/02/04 17:57:47 by gogalsty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_upper(char *str)
+int	ft_toupper(char *str)
 {
 	int	i;
 
