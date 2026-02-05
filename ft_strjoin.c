@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gogalsty <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/04 15:40:15 by gogalsty          #+#    #+#             */
-/*   Updated: 2026/02/05 17:33:29 by gogalsty         ###   ########.fr       */
+/*   Created: 2026/02/05 16:53:25 by gogalsty          #+#    #+#             */
+/*   Updated: 2026/02/05 17:54:35 by gogalsty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int	s_size;
-	char			*sub;
-	size_t			i;
+	size_t	len;
+	char	*join;
+	int		i;
+	int		j;
 
-	if (!s)
+	if (!s1 || !s2)
 		return (NULL);
-	s_size = ft_strlen(s);
-	if (start >= s_size)
-	{
-		sub = (char *)malloc(1);
-		if (!sub)
-			return (NULL);
-		sub[0] = '\0';
-		return (sub);
-	}
-	if (len > s_size - start)
-		len = s_size - start;
-	sub = (char *)malloc(len + 1);
-	if (!sub)
+	len = ft_strlen(s1) + ft_strlen(s2);
+	join = (char *)malloc((len + 1) * sizeof(char));
+	if (!join)
 		return (NULL);
 	i = 0;
-	while (i < len)
-		sub[i++] = s[start++];
-	sub[i] = '\0';
-	return (sub);
+	while (s1[i])
+	{
+		join[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (s2[j])
+		join[i++] = s2[j++];
+	join[i] = '\0';
+	return (join);
 }

@@ -6,7 +6,7 @@
 /*   By: gogalsty <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 14:50:14 by gogalsty          #+#    #+#             */
-/*   Updated: 2026/02/04 18:44:50 by gogalsty         ###   ########.fr       */
+/*   Updated: 2026/02/05 20:26:36 by gogalsty         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ char			*ft_strdup(char *str);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strrchr(const char *s, int c);
-
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
 #endif
